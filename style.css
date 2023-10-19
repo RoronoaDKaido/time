@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+body {
+  background-color: hsl(226, 43%, 10%);
+  color: white;
+  font-family: "Rubik";
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+main {
+  width: 80vw;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 4% 2%;
+}
+main .user-profile {
+  grid-row: span 2;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+main .user-profile .name-card {
+  background-color: hsl(246, 80%, 60%);
+  height: 70%;
+  border-radius: 1rem;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+main .user-profile .name-card img {
+  width: 30%;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+main .user-profile .name-card div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+main .user-profile .name-card div p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0;
+  color: hsl(236, 100%, 87%);
+}
+main .user-profile .name-card div h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 0;
+  line-height: 3rem;
+}
+main .user-profile .selector-card {
+  background-color: hsl(235, 46%, 20%);
+  height: 35%;
+  border-radius: 1rem;
+  position: relative;
+  top: -5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 40px 20px 20px;
+  z-index: -1;
+}
+main .user-profile .selector-card h3 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0;
+  color: hsl(236, 100%, 87%);
+  cursor: pointer;
+}
+main .user-profile .selector-card h3:hover {
+  color: white;
+}
+main .user-data {
+  border-radius: 1rem;
+  position: relative;
+}
+main .user-data .data-container {
+  background-color: hsl(235, 46%, 20%);
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  bottom: -1px;
+  border-radius: 1rem;
+  padding: 1.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+main .user-data .data-container .data {
+  margin-bottom: 1rem;
+}
+main .user-data .data-container .title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+main .user-data .data-container .title::after {
+  content: url(images/icon-ellipsis.svg);
+  position: relative;
+  top: -3px;
+  float: right;
+  opacity: 0.5;
+  cursor: pointer;
+}
+main .user-data .data-container .title:hover::after {
+  opacity: 1;
+}
+main .user-data .data-container .current-time {
+  font-size: 4rem;
+  font-weight: 300;
+  margin: 0;
+  line-height: 4.5rem;
+}
+main .user-data .data-container .last-week {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+  color: hsl(236, 100%, 87%);
+}
+main .user-data .data-container:hover {
+  background-color: hsl(236, 40%, 40%);
+}
+main .user-data.work {
+  background: url(images/icon-work.svg) no-repeat 95% -5%, hsl(15, 100%, 70%);
+}
+main .user-data.play {
+  background: url(images/icon-play.svg) no-repeat 95% -5%, hsl(195, 74%, 62%);
+}
+main .user-data.study {
+  background: url(images/icon-study.svg) no-repeat 95% -5%, hsl(348, 100%, 68%);
+}
+main .user-data.exercise {
+  background: url(images/icon-exercise.svg) no-repeat 95% -5%, hsl(145, 58%, 55%);
+}
+main .user-data.social {
+  background: url(images/icon-social.svg) no-repeat 95% -5%, hsl(264, 64%, 52%);
+}
+main .user-data.selfcare {
+  background: url(images/icon-self-care.svg) no-repeat 95% -5%, hsl(43, 84%, 65%);
+}
+
+@media screen and (max-width: 950px) {
+  * {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 720px) {
+  * {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 560px) {
+  * {
+    font-size: 6px;
+  }
+}/*# sourceMappingURL=style.css.map */
